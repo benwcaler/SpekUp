@@ -1,0 +1,31 @@
+body {
+  width: 80%;
+  margin: auto;
+  align-content: center;
+}
+
+#result {
+  height: 400px;
+  width: 1000px;
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: blueviolet;
+}
+
+#question {
+  background-color: aqua;
+  height: 400px;
+}
+
+#results {
+background-color: brown;
+}
+
+#queshun {
+  width: 100%;
+  font-size: 25px;
+  height: 30px;
+  padding: 20px;
+  border: 1px solid red;
+}
