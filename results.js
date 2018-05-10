@@ -1,5 +1,3 @@
-var chart = require("chart.js");
-
 window.onload = function () {
 
   var questions = [
@@ -26,7 +24,7 @@ window.onload = function () {
     {
       id: 5,
       question: "I'm not super stitious, but I am a little stitious.",
-      answers: [3, 4, 5, 6, 5, 4, 3]
+      answers: [3, 3, 3, 6, 5, 5]
     },
     {
       id: 6,
@@ -60,9 +58,51 @@ window.onload = function () {
     }
   }
 
-  $(document).on("click", "#queshun", function() {
-    
+  function newChart() {
+    var ctx = $("#chart");
+    var resultChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["1", "2", "3", "4", "5", "6"],
+        datasets: [{
+          label: questions[4].question,
+          data: questions[4].answers,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        },
+        responsive: false,
+        maintainAspectRatio: false
+      }
+    });
+  }
+
+  $(document).on("click", "#queshun", function () {
     $("#results").css("display", "block");
+    newChart();
   });
 
   loadQuestions();

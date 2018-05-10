@@ -24,6 +24,7 @@ body {
 #results {
   display: none;
   height: 400px;
+  width: 500px;
   position: relative;
 }
 
@@ -40,12 +41,9 @@ body {
   box-shadow: 0 3px 4px #888888;
 }
 
-#canvas {
-  width: 370px;
-  height: 270px;
-  background-color: #eeeeee;
+#chart {
   position: absolute;
   top: 45px;
-  left: 65px;
-  box-shadow: 0 5px 10px #888888;
+  left: 50px;
+  box-shadow: 5px 5px 10px #888888;
 }
