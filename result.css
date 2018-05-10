@@ -1,10 +1,6 @@
-/* * {
-  box-sizing: border-box;
-} */
 body {
   width: 80%;
   margin: auto;
-  align-content: center;
 }
 
 #container {

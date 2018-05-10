@@ -61,11 +61,12 @@ window.onload = function () {
   function newChart() {
     var ctx = $("#chart");
     var resultChart = new Chart(ctx, {
-      type: 'bar',
+      type: 'horizontalBar',
       data: {
         labels: ["1", "2", "3", "4", "5", "6"],
         datasets: [{
-          label: questions[4].question,
+          label: "# of Votes",
+          label: "$ of Votes",
           data: questions[4].answers,
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -95,7 +96,12 @@ window.onload = function () {
           }]
         },
         responsive: false,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          fontSize: 14,
+          text: questions[4].question
+        }
       }
     });
   }
