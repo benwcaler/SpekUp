@@ -37,6 +37,15 @@
         -- foreign key events.events_id
     );
 
+    CREATE TABLE poll_data (
+        poll_data_id INT(11) AUTO_INCREMENT NOT NULL,
+        poll_question VARCHAR (250),
+        poll_option VARCHAR (250),
+        option_count INT DEFAULT 0,
+        -- foreign key poll.id
+
+    );
+
     CREATE TABLE feedback (
         feedback_type VARCHAR (255),
         feedback_text VARCHAR (255),
