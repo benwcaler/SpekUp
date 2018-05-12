@@ -17,11 +17,12 @@ body {
   overflow-y: scroll;
 }
 
-#results {
-  display: none;
-  height: 400px;
-  width: 500px;
+#chartContainer {
+  /* display: none; */
   position: relative;
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
 }
 
 #queshun {
@@ -37,9 +38,10 @@ body {
   box-shadow: 0 3px 4px #888888;
 }
 
-#chart {
-  position: absolute;
+#canvas {
+  /* position: absolute;
   top: 45px;
-  left: 50px;
+  left: 50px; */
+  display: block;
   box-shadow: 5px 5px 10px #888888;
 }
