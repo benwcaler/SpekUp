@@ -4,9 +4,9 @@ body {
 }
 
 #container {
-  height: 400px;
-  width: 1000px;
-  margin-top: 200px;
+  height: auto;
+  width: 100%;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 0 5px 10px #888888;
@@ -15,33 +15,68 @@ body {
 #question {
   height: 400px;
   overflow-y: scroll;
+  width: 100%;
+  min-width: 200px;
 }
 
 #chartContainer {
-  /* display: none; */
   position: relative;
-  margin: auto;
-  height: 80vh;
-  width: 80vw;
+  width: 99%;
+
 }
 
-#queshun {
+.queshun {
+  border: 1px lightgrey;
+  border-style: hidden solid solid hidden;
+}
+
+.queshundiv {
   font-size: 18px;
-  height: 50px;
-  width: 482px;
-  border: 1px solid lightgrey;
-  padding: 0 0 0 15px;
+  height: auto;
+  padding: 15px;
 }
 
-#queshun:hover {
-  border: 2px solid lightgrey;
+.queshun ul {
+  /* border: 1px solid lightgrey; */
+  max-height: 0px;
+  padding-left: 20px;
+  list-style-type: none;
+  overflow: hidden;
+  line-height: 20px;
+  font-size: 12px;
+  -webkit-transition: max-height .25s ease-in;
+  -moz-transition: max-height .25s ease-in;
+  -o-transition: max-height .25s ease-in;
+  -ms-transition: max-height .25s ease-in;
+  transition: max-height .25s ease-in;
+}
+
+.queshun:hover {
   box-shadow: 0 3px 4px #888888;
 }
 
-#canvas {
-  /* position: absolute;
-  top: 45px;
-  left: 50px; */
-  display: block;
-  box-shadow: 5px 5px 10px #888888;
+.queshun:hover ul {
+  max-height: 200px;
+  -webkit-transition: max-height 1s ease-out;
+  -moz-transition: max-height 1s ease-out;
+  -o-transition: max-height 1s ease-out;
+  -ms-transition: max-height 1s ease-out;
+  transition: max-height 1s ease-out;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  #body {
+    width: 95%;
+  }
+  #container {
+    grid-template-columns: 1fr;
+  }
+  #chartContainer {
+    height: 400px;
+    border-top: 2px solid lightgrey;
+  }
 }
