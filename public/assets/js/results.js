@@ -61,6 +61,8 @@ window.onload = function () {
     for (var i = 0; i < questions.length; i++) {
       var newQuestion = $("<div>");
       var key = $("<ul>");
+      key.attr("data-qid", questions[i].id);
+      key.attr("data-selected", false)
       for (var j = 0; j < questions[i].choices.length; j++) {
         var alph = String.fromCharCode('A'.charCodeAt(0) + j);
         var li = $("<li>");
@@ -127,42 +129,40 @@ window.onload = function () {
           text: questions[id].question
         },
         legend: {
-          display: false,
-          labels: {
-
-          }
+          display: false
         }
       }
     });
   }
 
-  var persistent = 1;
+  var persistent = 0;
   $(document).on("click", ".queshun", function () {
-    persistent = $(this).data("id");
-    //TODO set the ul max-height of ONLY this queshun to 200px
+    if (persistent === $(this).data("id")) {
+      persistent = null;
+    } else {
+      persistent = $(this).data("id");
+    }
+    $("ul").css("max-height", "0px");
+    $(`*[data-qid=${persistent}]`).css("transition", "max-height 0.75s ease-out");
+    $(`*[data-qid=${persistent}]`).css("max-height", "200px");
   });
 
   $(document).on("mouseenter", ".queshun", function () {
-    $(".queshun").css("border-right", "1px solid lightgrey")
+    $(".queshun").css("border-right", "1px solid darkslategrey")
     newChart($(this).data("id") - 1);
     $(this).css("border-right", "hidden");
   });
 
-  $(document).on("mouseleave", ".queshun", function () {
-    // $(this).css("border-right", "1px solid lightgrey");
-  });
-
   $(document).on("mouseleave", "#container", function () {
-    // $("#chartContainer").empty();
-    $(".queshun").css("border-right", "1px solid lightgrey")
+    $(".queshun").css("border-right", "1px solid darkslategrey");
+    $("ul").css("max-height", "0px");
     if (persistent) {
       newChart(persistent - 1);
       $(`*[data-id=${persistent}]`).css("border-right", "hidden");
+      $(`*[data-qid=${persistent}]`).css("max-height", "200px");
     }
   });
 
   loadQuestions();
   newChart(0);
 }
-
-//TODO set background of queshundiv to have a gradient of somekind to distinquish it from the ul
