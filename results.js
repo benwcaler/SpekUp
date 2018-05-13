@@ -4,69 +4,94 @@ window.onload = function () {
     {
       id: 1,
       question: "Why did Timmy do it?",
-      answers: [4, 5, 7, 6, 4, 3]
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
+      answers: [4, 5, 7, 6, 4, 3, 9, 7]
     },
     {
       id: 2,
       question: "Why was Marsha so mad?",
-      answers: [3, 5, 6, 7, 6, 5]
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
+      answers: [3, 5, 6, 7, 6, 5, 5, 4]
     },
     {
       id: 3,
       question: "What gives you the right.",
-      answers: [4, 5, 6, 8, 7, 3, 2]
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
+      answers: [4, 5, 6, 8, 7, 3, 2, 4]
     },
     {
       id: 4,
       question: "Well maybe next time, Jan, you'll estimate me.",
-      answers: [4, 5, 7, 6, 4, 3]
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
+      answers: [4, 5, 7, 6, 4, 3, 5, 4]
     },
     {
       id: 5,
       question: "I'm not super stitious, but I am a little stitious.",
-      answers: [3, 3, 3, 6, 5, 5]
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
+      answers: [3, 3, 3, 6, 5, 5, 5, 4]
     },
     {
       id: 6,
       question: "Why?",
-      answers: [2, 3, 4, 5, 6, 7, 8]
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
+      answers: [2, 3, 4, 5, 6, 7, 5, 5]
     },
     {
       id: 7,
       question: "What kind of bear is best?",
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
       answers: [1, 2, 4, 3, 2, 3, 4, 5]
     },
     {
       id: 8,
       question: "Do you watch Battlestar Galactica? No? Then you are an idiot.",
-      answers: [6, 5, 6, 6, 6, 4, 3, 3, 3]
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
+      answers: [6, 5, 6, 6, 6, 4, 3, 5]
     },
     {
       id: 9,
       question: "This is another question.",
-      answer: [4, 5, 4, 4, 4, 5, 6, 6, 6]
+      choices: ["this is a choice", "this is another choice", "another choice", "yet another choice", "even more choices", "again a choice", "so many choices", "one more choice"],
+      answers: [4, 5, 4, 4, 4, 5, 6, 6]
     }
   ];
 
   function loadQuestions() {
     for (var i = 0; i < questions.length; i++) {
       var newQuestion = $("<div>");
-      newQuestion.attr("id", "queshun");
-      newQuestion.attr("data-id", questions[i].id)
-      newQuestion.text(questions[i].question);
+      var key = $("<ul>");
+      for (var j = 0; j < questions[i].choices.length; j++) {
+        var alph = String.fromCharCode('A'.charCodeAt(0) + j);
+        var li = $("<li>");
+        li.text(alph + " - " + questions[i].choices[j]);
+        key.append(li);
+      }
+      var ul = $("<div>").append(key)
+      newQuestion.attr("class", "queshun");
+      newQuestion.attr("data-id", questions[i].id);
+      newQuestion.append("<div class='queshundiv'>" + questions[i].question + "</div>");
+      newQuestion.append(ul);
       $("#question").append(newQuestion);
     }
   }
 
-  function newChart() {
-    var ctx = document.getElementById('canvas').getContext('2d');
+
+  function newChart(id) {
+    var labels = [];
+    for (var i = 'A'.charCodeAt(0); i < 'A'.charCodeAt(0) + questions[id].choices.length; i++) {
+      labels.push(String.fromCharCode(i));
+    }
+    $("#chartContainer").empty();
+    $("#chartContainer").append($("<canvas id='canvas' class='chartjs-render-monitor'>"));
+    var ctx = $("#canvas");
     var resultChart = new Chart(ctx, {
-      type: 'bar',
+      type: 'horizontalBar',
       data: {
-        labels: ["1", "2", "3", "4", "5", "6"],
+        labels: labels,
         datasets: [{
           label: "# of Votes",
-          data: questions[4].answers,
+          data: questions[id].answers,
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -94,25 +119,50 @@ window.onload = function () {
             }
           }]
         },
-        // responsive: true,
-        maintainAspectRatio: true,
+        responsive: true,
+        maintainAspectRatio: false,
         title: {
           display: true,
           fontSize: 14,
-          text: questions[4].question
+          text: questions[id].question
         },
         legend: {
-          display: false
+          display: false,
+          labels: {
+
+          }
         }
       }
     });
   }
-  // newChart();
-  $(document).on("click", "#queshun", function () {
-    $("#results").css("display", "block");
-    newChart();
+
+  var persistent = 1;
+  $(document).on("click", ".queshun", function () {
+    persistent = $(this).data("id");
+    //TODO set the ul max-height of ONLY this queshun to 200px
+  });
+
+  $(document).on("mouseenter", ".queshun", function () {
+    $(".queshun").css("border-right", "1px solid lightgrey")
+    newChart($(this).data("id") - 1);
+    $(this).css("border-right", "hidden");
+  });
+
+  $(document).on("mouseleave", ".queshun", function () {
+    // $(this).css("border-right", "1px solid lightgrey");
+  });
+
+  $(document).on("mouseleave", "#container", function () {
+    // $("#chartContainer").empty();
+    $(".queshun").css("border-right", "1px solid lightgrey")
+    if (persistent) {
+      newChart(persistent - 1);
+      $(`*[data-id=${persistent}]`).css("border-right", "hidden");
+    }
   });
 
   loadQuestions();
-
+  newChart(0);
 }
+
+//TODO set background of queshundiv to have a gradient of somekind to distinquish it from the ul
