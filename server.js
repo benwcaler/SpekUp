@@ -30,13 +30,14 @@ app.use(express.static("public"));
 require("./routes/users-api-routes.js")(app);
 require("./routes/events-api-routes.js")(app);
 require("./routes/polls-api-routes.js")(app);
+require("./routes/polls-data-api-routes.js")(app);
 require("./routes/feedback-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+db.sequelize.sync({ force: true }).then(function () {
+	app.listen(PORT, function () {
+		console.log("App listening on PORT " + PORT);
+	});
 });
