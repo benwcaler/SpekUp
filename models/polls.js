@@ -5,26 +5,26 @@ module.exports = function (sequelize, DataTypes) {
     // Giving the Polls model a name of type STRING
     name: DataTypes.STRING
   }, {
-    classMethods: {
-      associate : function (models) {
-        // Associating Polls with Feedback
-        // When an User is deleted, also delete any associated Posts
-        Polls.hasMany(models.Feeback, {
-          onDelete: "cascade"
-        });
-        Polls.belongsTo(models.Events, {
-          foreignKey: {
-            allowNull: false
-          }
-        });
+      classMethods: {
+        associate: function (models) {
+          // Associating Polls with Feedback
+          // When an User is deleted, also delete any associated Posts
+          Polls.hasMany(models.Feedback, {
+            onDelete: "cascade"
+          });
+          Polls.belongsTo(models.Events, {
+            foreignKey: {
+              allowNull: false
+            }
+          });
+        }
       }
-    }
-  });
+    });
 
   // Polls.associate = function(models) {
   //   // Associating Polls with Feedback
   //   // When an User is deleted, also delete any associated Posts
-  //   Polls.hasMany(models.Feeback, {
+  //   Polls.hasMany(models.Feedback, {
   //     onDelete: "cascade"
   //   });
   //   Polls.belongsTo (models.Events, {
@@ -32,11 +32,8 @@ module.exports = function (sequelize, DataTypes) {
   //       allowNull: false
   //     }
   //   });
+  return Polls;
 };
 
-return Polls;
-
-
-};
 
 //   add belongs to events

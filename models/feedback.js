@@ -52,7 +52,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     }
   });
-  return Poll_Data;
+  return Feedback;
 };
 
 // add belongs to events
