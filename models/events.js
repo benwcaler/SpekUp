@@ -21,20 +21,20 @@ module.exports = function (sequelize, DataTypes) {
 	});
 
 	// Commenting out foreign key relationship for now
-	// Events.associate = function (models) {
-	// 	// Associating events with polls
-	// 	// When an Events is deleted, also delete any associated polls
-	// 	Events.hasMany(models.Polls, {
-	// 		onDelete: "cascade"
-	// 	});
-	// 	Events.hasMany(models.Feedback, {
-	// 		onDelete: "cascade"
-	// 	});
-	// 	Events.belongsTo(models.User, {
-	// 		foreignKey: {
-	// 			allowNull: false
-	// 		}
-	// 	});
-	// };
+	Events.associate = function (models) {
+		// Associating events with polls
+		// When an Events is deleted, also delete any associated polls
+		Events.hasMany(models.Polls, {
+			onDelete: "cascade"
+		});
+		Events.hasMany(models.Feedback, {
+			onDelete: "cascade"
+		});
+		Events.belongsTo(models.User, {
+			foreignKey: {
+				allowNull: false
+			}
+		});
+	};
 	return Events;
 };
