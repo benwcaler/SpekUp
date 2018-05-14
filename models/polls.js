@@ -44,6 +44,4 @@ module.exports = function (sequelize, DataTypes) {
 //     }
 //   });
 
-
-
 //   add belongs to events

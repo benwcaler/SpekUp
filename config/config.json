@@ -1,8 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
-    "database": "SpekUp_db",
+
+    "password": "test",
+    "database": "spekup",
+
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -21,3 +23,4 @@
     "dialect": "mysql"
   }
 }
+

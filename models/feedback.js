@@ -33,6 +33,7 @@
 // };
 // doesn't have "hasMany"
 module.exports = function (sequelize, DataTypes) {
+
 	var Feedback = sequelize.define("feedback", {
 		// Giving the Feedback model a name of type STRING
 		feedback_type: {
@@ -58,6 +59,7 @@ module.exports = function (sequelize, DataTypes) {
 	// 	});
 	// };
 	return Feedback;
+
 };
 
 // add belongs to events

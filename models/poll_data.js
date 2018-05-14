@@ -1,5 +1,6 @@
 // doesn't have "hasMany"
 module.exports = function (sequelize, DataTypes) {
+
 	var Poll_Data = sequelize.define("poll_data", {
 		// Giving the poll_data model a name of type STRING
 		poll_option: {
@@ -25,3 +26,4 @@ module.exports = function (sequelize, DataTypes) {
 	// };
 	return Poll_Data;
 };
+
