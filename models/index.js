@@ -25,12 +25,14 @@ fs
   });
 
 Object.keys(db).forEach(function(modelName) {
-  if ("classMethods" in db[modelName].options) {
-    if  ("associate" in db[modelName].options.classMethods) {
-      db[modelName].options.classMethod.associate;
-    };
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
+  }
+  // if ("classMethods" in db[modelName].options) {
+  //   if  ("associate" in db[modelName].options.classMethods) {
+  //     db[modelName].options.classMethod.associate;
+  //   };
 
-  };
 // replaced line 35-37 with line 28-31
   // if (db[modelName].associate) {
   //   db[modelName].associate(db);
