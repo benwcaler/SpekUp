@@ -1,7 +1,7 @@
 // has many polls_data
 
 module.exports = function (sequelize, DataTypes) {
-	var Polls = sequelize.define("polls", {
+	var Polls = sequelize.define("Polls", {
 		// Giving the Polls model a name of type STRING
 		poll_type: {
 			type: DataTypes.STRING,
@@ -17,18 +17,19 @@ module.exports = function (sequelize, DataTypes) {
 			defaultValue: true
 		}
 	});
-	// Polls.associate = function (models) {
-	// 	// Associating Polls with Polls Data
-	// 	// When an Poll is deleted, also delete any associated data
-	// 	Polls.hasMany(models.Poll_Data, {
-	// 		onDelete: "cascade"
-	// 	});
-	// 	Polls.belongsTo(models.Events, {
-	// 		foreignKey: {
-	// 			allowNull: false
-	// 		}
-	// 	});
-	// };
+	Polls.associate = function (models) {
+		// Associating Polls with Polls Data
+		// When an Poll is deleted, also delete any associated data
+		Polls.hasMany(models.Poll_Data, {
+			onDelete: "cascade"
+		});
+		Polls.belongsTo(models.Events, {
+			foreignKey: {
+				allowNull: false
+			}
+		});
+	};
+	
 	return Polls;
 };
 
