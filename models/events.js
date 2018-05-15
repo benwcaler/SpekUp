@@ -17,7 +17,16 @@ module.exports = function (sequelize, DataTypes) {
 			validate: {
 				len: [1]
 			}
-		}
+		},'createdAt': {
+      type: DataTypes.DATE(3),
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)'),
+    },
+    'updatedAt': {
+      type: DataTypes.DATE(3),
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)'),
+    },
+  }, {
+    timestamps: true
 	});
 
 	// Commenting out foreign key relationship for now

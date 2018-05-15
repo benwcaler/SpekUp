@@ -15,7 +15,16 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.BOOLEAN,
 			allowNull: false,
 			defaultValue: true
-		}
+		},'createdAt': {
+      type: DataTypes.DATE(3),
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)'),
+    },
+    'updatedAt': {
+      type: DataTypes.DATE(3),
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)'),
+    },
+  }, {
+    timestamps: true
 	});
 	Polls.associate = function (models) {
 		// Associating Polls with Polls Data
@@ -32,17 +41,5 @@ module.exports = function (sequelize, DataTypes) {
 	
 	return Polls;
 };
-
-// Polls.associate = function(models) {
-//   // Associating Polls with Feedback
-//   // When an User is deleted, also delete any associated Posts
-//   Polls.hasMany(models.Feeback, {
-//     onDelete: "cascade"
-//   });
-//   Polls.belongsTo (models.Events, {
-//     foreignKey: {
-//       allowNull: false
-//     }
-//   });
 
 //   add belongs to events
