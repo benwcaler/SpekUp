@@ -2,15 +2,50 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-	// GET route for getting all of the 
+	// GET route for getting all polls for a given user_name 
 	app.get("/api/users", function (req, res) {
-		// Here we add an "include" property to our options in our findAll query
-		// We set the value to an array of the models we want to include in a left outer join
-		// In this case, just db.Post
-		db.Author.findAll({
-			include: [db.Post]
-		}).then(function (dbAuthor) {
-			res.json(dbAuthor);
+		db.User.findAll({
+		}).then(function (dbUser) {
+			res.json(dbUser);
+		});
+	});
+
+	app.get("/api/users/polls/:user_name", function (req, res) {
+		db.User.findAll({
+			where: {
+				user_name: req.params.user_name
+			},
+			include: [{
+				model: db.Events,
+				include: [{
+					model: db.Feedback
+				}]
+			}],
+			include: [{
+				model: db.Events,
+				include: [{
+					model: db.Polls,
+					include: [{ model: db.Poll_Data }]
+				}]
+			}],
+		}).then(function (dbUser) {
+			res.json(dbUser);
+		});
+	});
+
+	app.get("/api/users/feedback/:user_name", function (req, res) {
+		db.User.findAll({
+			where: {
+				user_name: req.params.user_name
+			},
+			include: [{
+				model: db.Events,
+				include: [{
+					model: db.Feedback
+				}]
+			}]
+		}).then(function (dbUser) {
+			res.json(dbUser);
 		});
 	});
 
