@@ -1,8 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "test",
-    "database": "spekup",
+    "password": "root",
+    "port": "8889",
+    "database": "spek_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
