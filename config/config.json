@@ -11,14 +11,14 @@
   },
   "test": {
     "username": "root",
-    "password": "whatever",
+    "password": "why",
     "database": "spekup_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "cangetin",
+    "password": "why",
     "database": "spekup_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
