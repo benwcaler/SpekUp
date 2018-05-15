@@ -8,15 +8,15 @@
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
+    "password": "whatever",
+    "database": "spekup_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "database_production",
+    "password": "cangetin",
+    "database": "spekup_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
