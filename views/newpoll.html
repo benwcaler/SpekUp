@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="./newpoll.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="./newpoll.css">
+  <title>Document</title>
+</head>
+<body style="background-color: darkgrey;">
+    <div id="container">
+        <button id="create">Create Poll</button>
+        <div id="img-modal" class="modal modal-dialogue">
+          <p id="modal-title">New Poll</p>
+          <form>
+            <h4>Poll Name</h4>
+            <input id="name" type="text">
+            <h4>Questions</h4>
+            <div id="questions">
+
+            </div>
+            <button id="newQ" type="button">Add Question</button>
+            <button id="cancel" type="button">Cancel</button>
+            <button id="submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+</body>
+</html>
