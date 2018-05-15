@@ -11,20 +11,21 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.TEXT,
 			allowNull: false,
 			len: [1]
-		},'createdAt': {
-      type: DataTypes.DATE(3),
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)'),
-    },
-    'updatedAt': {
-      type: DataTypes.DATE(3),
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)'),
-    },
-  }, {
-    timestamps: true
-	});
+		}
+		// ,'createdAt': {
+		//   type: DataTypes.DATE(3),
+		//   defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)'),
+		// },
+		// 'updatedAt': {
+		//   type: DataTypes.DATE(3),
+		//   defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)'),
+		// },
+	}, {
+			timestamps: true
+		});
 
 	// this is the "options" object from the sequelize documentation
-		// Commenting out foreign key relationship for now
+	// Commenting out foreign key relationship for now
 	Feedback.associate = function (models) {
 		// We're saying that Feedback should belong to an Poll
 		// Feedback can't be created without an Poll due to the foreign key constraint
