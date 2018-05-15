@@ -61,6 +61,7 @@ $(document).ready(function () {
 
   $("#cancel").on("click", function () {
     $("#img-modal").modal({ "show": false });
+    $(this).closest('form').find("input[type=text], textarea").val("");
   });
 
 });
