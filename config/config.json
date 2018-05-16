@@ -1,23 +1,25 @@
 {
-	"development": {
-		"username": "root",
-		"password": "test",
-		"database": "Spek_db",
-		"host": "127.0.0.1",
-		"dialect": "mysql"
-	},
-	"test": {
-		"username": "root",
-		"password": "whynot",
-		"database": "spekup_test",
-		"host": "127.0.0.1",
-		"dialect": "mysql"
-	},
-	"production": {
-		"username": "root",
-		"password": "why",
-		"database": "spekup_production",
-		"host": "127.0.0.1",
-		"dialect": "mysql"
-	}
+  "development": {
+    "username": "root",
+    "password": "root",
+    "port": "8889",
+    "database": "Spekup_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
 }
+
