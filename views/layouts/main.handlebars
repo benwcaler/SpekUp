@@ -7,11 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-  <script src="./assets/js/newevent.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script type="text/javascript" src="./assets/js/login.js"></script>
   <title>SpekUp!</title>
 </head>
 
@@ -24,29 +23,15 @@
       <div class="logo-container">
         <div class="col-md-4"></div>
         <div class="col-md-3">
-          <a href="#home">
+          <a href="/home">
             <img class="logo" src="./assets/img/logo.png" alt="logo">
           </a>
         </div>
       </div>
     </div>
   </div>
-  <div class="buttoncontainer2">
-    <button id="create">Create Event</button>
-    <div id="img-modal" class="modal modal-dialogue">
-      <p id="modal-title">New Event</p>
-      <p class="modal-body">Give event description and add questions</p>
-      <form id="eventform">
-        <h4>Event Name</h4>
-        <input id="name" type="text">
-        <h4>Event Description</h4>
-        <input id="description" type="text">
-        <button id="cancel" type="button">Cancel</button>
-        <button id="reset" type="button">Reset</button>
-        <button id="submit" type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
+  <!-- the buttons for log in and sign up -->
+  {{{body}}}
 </body>
 
 </html>
