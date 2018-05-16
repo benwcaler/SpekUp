@@ -58,14 +58,47 @@ module.exports = function (app) {
 		console.log(req.body);
 		db.Events.create({
 			event_code: req.body.event_code
-		, event_desc: req.body.event_desc
-		, UserId: req.body.UserId
+			, event_desc: req.body.event_desc
+			, UserId: req.body.UserId
 		})
 			.then(function (dbEvents) {
 				res.json(dbEvents);
 			})
 			.catch(function (error) {
 				console.log("Invalid data for insert");
+				res.json(error);
+			});
+	});
+
+	app.put("/api/events/event_id", function (req, res) {
+		console.log(req.body);
+		db.Events.update(
+			req.body,
+			{
+				where: {
+					id: req.body.id
+				}
+
+			})
+			.then(function (dbEvents) {
+				res.json(dbEvents);
+			})
+			.catch(function (error) {
+				console.log("Invalid data for update");
+				res.json(error);
+			});
+	});
+
+	app.delete("/api/events", function (req, res) {
+		db.Events.destroy({
+			where: {
+				id: req.body.id
+			}
+		}).then(function (dbDelete) {
+			res.json(dbDelete);
+		})
+			.catch(function (error) {
+				console.log("Invalid data for delete");
 				res.json(error);
 			});
 	});

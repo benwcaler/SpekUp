@@ -16,4 +16,19 @@ module.exports = function(app) {
 				res.json(error);
 			});
 	});
+
+	app.delete("/api/feedback", function (req, res) {
+		db.Feedback.destroy({
+			where: {
+				id: req.body.id
+			}
+		}).then(function (dbDelete) {
+			res.json(dbDelete);
+		})
+			.catch(function (error) {
+				console.log("Invalid data for delete");
+				res.json(error);
+			});
+	});
+
 };
