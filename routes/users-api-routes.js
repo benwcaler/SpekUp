@@ -16,10 +16,10 @@ module.exports = function (app) {
 	});
 
 	// GET route for getting all events and polls for a given user_name 
-	app.get("/api/users/polls/:user_name", function (req, res) {
+	app.get("/api/users/login", function (req, res) {
 		db.User.findAll({
 			where: {
-				user_name: req.params.user_name
+				user_name: req.query.uname
 			},
 			include: [{
 				model: db.Events,
@@ -30,6 +30,18 @@ module.exports = function (app) {
 			}],
 		})
 			.then(function (dbUser) {
+				if (req.query.pwd === dbUser.password) {
+					var sessionID = Math.floor((Math.random() * 1000000) + 1);
+					db.User.update({
+						sessionID: sessionID
+					}, {
+							where: {
+								user_name: req.query.uname
+							}
+						}).then(function (resp2) {
+							res.redirect
+						});
+				}
 				res.json(dbUser);
 			})
 			.catch(function (error) {
@@ -64,10 +76,12 @@ module.exports = function (app) {
 	app.post("/api/users", function (req, res) {
 		console.log(req.body);
 		db.User.create({
-			user_name: req.body.user_name
+			user_name: req.body.user_name,
+			password: req.body.user_password,
+			email: req.body.user_email
 		})
 			.then(function (dbUser) {
-				res.json(dbUser);
+				res.redirect("/home")
 			})
 			.catch(function (error) {
 				console.log("Invalid data for insert");

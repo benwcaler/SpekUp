@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
@@ -21,14 +23,14 @@
         <div class="col-md-4"></div>
         <div class="col-md-3">
           <a href="/home">
-            <img class="logo" src="../logo/logo.png" alt="logo">
+            <img class="logo" src="./assets/img/logo.png" alt="logo">
           </a>
         </div>
       </div>
       <!-- the buttons for log in and sign up -->
       <div class="buttoncontainer">
-        <button id="login" type="button">Login!</button>
-        <button id="signup" type="button">Sign Up to Create new Event!</button>
+        <button id="login" type="button" onclick="location.href='/login'">Login!</button>
+        <button id="signup" type="button" onclick="location.href='/signup'">Sign Up to Create new Event!</button>
       </div>
     </div>
   </div>
@@ -52,7 +54,8 @@
       </form>
     </div>
     </a>
-
+  </div>
+  <script type="text/javascript" src="./assets/js/login.js"></script>
 </body>
 
 </html>

@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>SpekUp!</title>
 </head>
 
@@ -19,8 +21,8 @@
                 <div class="logo-container">
                     <div class="col-md-4"></div>
                     <div class="col-md-3">
-                        <a href="#home">
-                            <img class="logo" src="../logo/logo.png" alt="logo">
+                        <a href="/home">
+                            <img class="logo" src="./assets/img/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -33,7 +35,7 @@
     <div class="row">
         <div class="row">
             <div class="row">
-                <form id="loginform">
+                <form id="loginform" action="/api/users/login" method="GET">
                     <div class="logincontainer">
                         <label for="uname">
                             <b>Username</b>
@@ -43,12 +45,12 @@
                         <label for="psw">
                             <b>Password</b>
                         </label>
-                        <input id="inputlogin" type="password" placeholder="Enter Password" name="psw" required>
+                        <input id="inputpassword" type="password" placeholder="Enter Password" name="psw" required>
                         <button id="login" type="submit">Login</button>
                     </div>
+                </form>
             </div>
-            </form>
         </div>
     </div>
-    </div>
+    <script type="text/javascript" src="./assets/js/login.js"></script>
 </body>
