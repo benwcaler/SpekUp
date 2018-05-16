@@ -48,4 +48,36 @@ module.exports = function (app) {
 			});
 	});
 
+	app.put("/api/polls/polls_id", function (req, res) {
+		console.log(req.body);
+		db.Polls.update(
+			req.body, 
+			{ where: {
+					id: req.body.id
+				}
+
+			})
+			.then(function (dbPolls) {
+				res.json(dbPolls);
+			})
+			.catch(function (error) {
+				console.log("Invalid data for update");
+				res.json(error);
+			});
+	});
+
+	app.delete("/api/polls", function (req, res) {
+		db.Polls.destroy({
+			where: {
+				id: req.body.id
+			}
+		}).then(function (dbDelete) {
+			res.json(dbDelete);
+		})
+			.catch(function (error) {
+				console.log("Invalid data for delete");
+				res.json(error);
+			});
+	});
+
 };
