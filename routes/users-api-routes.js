@@ -38,17 +38,16 @@ module.exports = function (app) {
 							where: {
 								user_name: req.query.uname
 							}
-						}).then(function (resp2) {
-							res.redirect
+						}).then(function (resp) {
+							// res.redirect("/userhome");
+							res.json(dbUser);
 						});
 				}
-				res.json(dbUser);
 			})
 			.catch(function (error) {
 				console.log("Invalid request");
 				res.json(error);
 			});
-
 	});
 
 	// GET route for getting all events and feedback for a given user_name 
