@@ -11,17 +11,17 @@ module.exports = function (app) {
 
   // add html routes
   app.get("/home", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/home.html"));
+    res.render("home");
   });
 
   // login page
   app.get("/login", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/login.html"));
+    res.render("login");
   });
 
   // signup page
   app.get("/signup", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/signup.html"));
+    res.render("signup");
   });
 
   // results page
@@ -30,7 +30,8 @@ module.exports = function (app) {
   });
   
   app.get("/userhome", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/userhome.html"));
+    console.log(res);
+    res.render("userhome", {user: res})
   });
   
   // app.get("*", function (req, res) {
@@ -38,6 +39,6 @@ module.exports = function (app) {
   // });
 
   app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/home.html"));
+    res.render("home");
   });
 };

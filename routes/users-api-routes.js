@@ -39,8 +39,7 @@ module.exports = function (app) {
 								user_name: req.query.uname
 							}
 						}).then(function (resp) {
-							// res.redirect("/userhome");
-							res.json(dbUser);
+							res.redirect("/userhome", dbUser);
 						});
 				}
 			})
@@ -80,7 +79,8 @@ module.exports = function (app) {
 			email: req.body.user_email
 		})
 			.then(function (dbUser) {
-				res.redirect("/home")
+				console.log(dbUser);
+				res.redirect("/userhome", dbUser);
 			})
 			.catch(function (error) {
 				console.log("Invalid data for insert");
