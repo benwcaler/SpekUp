@@ -1,15 +1,15 @@
-// $("#loginform").on("submit", function (event) {
-//   event.preventDefault();
-//   var id = $("#inputlogin").val();
-//   console.log(id)
-//   $.ajax({
-//     url: `/api/users/polls/:${id}`,
-//     type: "GET",
-//     success: function (res) {
-//       console.log(res)
-//     }
-//   })
-// });
+$("#loginform").on("submit", function (event) {
+  event.preventDefault();
+  var id = $("#inputlogin").val();
+  console.log(id)
+  $.ajax({
+    url: `/api/users/polls/:${id}`,
+    type: "GET",
+    success: function (res) {
+      console.log(res)
+    }
+  })
+});
 
 
 
