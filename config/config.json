@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "test",
-    "port": "3306",
+    "password": "root",
+    "port": "8889",
     "database": "Spek_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -18,7 +18,7 @@
     "username": "fkvdw4hnmzgeh2zf",
     "password": "b207dtpffg2zot3y",
     "database": "xqai061fv4ni3asu",
-    "port": "3306",
+    "port": "8889",
     "host": "hngomrlb3vfq3jcr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
