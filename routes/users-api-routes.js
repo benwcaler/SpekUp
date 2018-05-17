@@ -39,7 +39,7 @@ module.exports = function (app) {
 								user_name: req.query.uname
 							}
 						}).then(function (resp) {
-							res.redirect("/userhome", dbUser);
+							res.redirect(`/userhome/${sessionID}`);
 						});
 				}
 			})
@@ -51,6 +51,7 @@ module.exports = function (app) {
 
 	// GET route for getting all events and feedback for a given user_name 
 	app.get("/api/users/feedback/:user_name", function (req, res) {
+		
 		db.User.findAll({
 			where: {
 				user_name: req.params.user_name
@@ -73,19 +74,21 @@ module.exports = function (app) {
 
 	app.post("/api/users", function (req, res) {
 		console.log(req.body);
+		var sessionID = Math.floor((Math.random() * 1000000) + 1);
 		db.User.create({
 			user_name: req.body.user_name,
 			password: req.body.user_password,
-			email: req.body.user_email
+			email: req.body.user_email,
+			sessionID: sessionID
 		})
 			.then(function (dbUser) {
 				console.log(dbUser);
-				res.redirect("/userhome", dbUser);
+				res.redirect(`/userhome/${sessionID}`);
 			})
-			.catch(function (error) {
-				console.log("Invalid data for insert");
-				res.json(error);
-			});
+			// .catch(function (error) {
+			// 	console.log("Invalid data for insert");
+			// 	res.json(error);
+			// });
 	});
 
 	app.delete("/api/users", function (req, res) {
