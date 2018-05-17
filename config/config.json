@@ -18,7 +18,7 @@
     "username": "fkvdw4hnmzgeh2zf",
     "password": "b207dtpffg2zot3y",
     "database": "xqai061fv4ni3asu",
-    "port": "8889",
+    "port": "3306",
     "host": "hngomrlb3vfq3jcr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
