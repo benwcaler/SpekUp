@@ -13,7 +13,7 @@
 ### [3-Challenges](# 3-Challenges)
 ### [4-Issues](# Issues)
 ### [5-Desired Features](# 5-Desired-Features)
-[6-Contributors](#6-Contributors)
+### [Contributors](#Contributors)
 
  ---
 
