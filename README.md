@@ -8,12 +8,12 @@
 
   
 
-### [Description](#1-description-page\facing\up)
+### [Description](#1-description-page-facing-up)
 ### [Technologies](#2-technologies-computer)
 ### [Challenges](#3-challenges-screamboom)
 ### [Issues](#4-issues-questionexclamation)
 ### [Desired Features](#5-desired-features-star2)
-### [Contributors](#6-contributors-raisedhands)
+### [Contributors](#6-contributors-raised-hands)
 
  ---
 
