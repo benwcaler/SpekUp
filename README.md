@@ -8,16 +8,16 @@
 
   
 
-### [Description](#description)
-### [2-Technologies](# 2-Technologies)
-### [3-Challenges](# 3-Challenges)
-### [4-Issues](# Issues)
-### [5-Desired Features](# 5-Desired-Features)
-### [Contributors](#6-contributors-raisedhands)
+### [1-Description](#description)
+### [2-Technologies](#2-technologies)
+### [3-Challenges](#3-challenges)
+### [4-Issues](#4-issues)
+### [5-Desired Features](#5-desired-features)
+### [6-Contributors](#6-contributors)
 
  ---
 
-### 1-Description :page\_facing\_up:
+### 1-Description
 
 This is a description of a project that I have completed that focuses on a specific technology with other supporting technologies that I have already learned. This description should give you a good idea of what the project does in plan, design and implementation. How does it help improve the user's life? What is the overall purpose of the work? If I were to leave the project today what would people need to know about the idea in order to maintain the project
 
@@ -28,7 +28,7 @@ This is a description of a project that I have completed that focuses on a speci
 ---
 
 
-### 2-Technologies  :computer:
+### 2-Technologies
 
   This project utilizes the following technologies:
 
@@ -53,7 +53,7 @@ This is a description of a project that I have completed that focuses on a speci
 
 ---
 
-### 3-Challenges :scream::boom:
+### 3-Challenges
 
 > **Note:** This section is meant for beginners an idea of what the *crux* technology was for this project. Ideally by seeing this first they will be able tackle the hard problem first to start the learning/absorption process as soon as possible.
 
@@ -66,13 +66,13 @@ Throughout this project there was only one challenge the proved to be tricky to 
 -[Link1]()
 -[Link1]()
 
-### 4-Issues :question::exclamation:
+### 4-Issues
 
   Currently there are no known issues that need to be resolved. If you find an issue please submit it using the issues tab, or contact [Nick Brown](https://github.com/nick-d-brown/).
 
 ---
 
-### 5-Desired Features :star2:
+### 5-Desired Features
 
   Below is a list of possible features that we would like to add to the project. If You would like to propose a feature to add please feel free to create a PR to add it to the list. **We love it when others can help propose ideas!**
 
@@ -82,7 +82,7 @@ Throughout this project there was only one challenge the proved to be tricky to 
 4.	idea4
 5.	idea5
 
-## 6-Contributors :raised_hands:
+### 6-Contributors
 
 - [Nick Brown](https://github.com/nick-d-brown/)
 
