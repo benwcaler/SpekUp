@@ -8,12 +8,12 @@
 
   
 
-### [1-Description](#description)
-### [2-Technologies](#2-technologies)
-### [3-Challenges](#3-challenges)
-### [4-Issues](#4-issues)
-### [5-Desired Features](#5-desired-features)
-### [6-Contributors](#6-contributors)
+### [1-Description](#1description)
+### [2-Technologies](#2technologies)
+### [3-Challenges](#3challenges)
+### [4-Issues](#4issues)
+### [5-Desired Features](#5desired-features)
+### [6-Contributors](#6contributors)
 
  ---
 
