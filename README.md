@@ -8,12 +8,12 @@
 
   
 
-### [1-Description](https://github.com/benwcaler/SpekUp#Description)
-### [2-Technologies](https://github.com/benwcaler/SpekUp#Technologies)
-### [3-Challenges](https://github.com/benwcaler/SpekUp#Challenges)
-### [4-Issues](https://github.com/benwcaler/SpekUp#Issues)
-### [5-Desired Features](https://github.com/benwcaler/SpekUp#Desired-Features)
-### [6-Contributors](https://github.com/benwcaler/SpekUp#Contributors)
+### [1-Description](#1-Description)
+### [2-Technologies](#2-Technologies)
+### [3-Challenges](#3-Challenges)
+### [4-Issues](#Issues)
+### [5-Desired Features](#5-Desired-Features)
+### [6-Contributors](#6-Contributors)
 
  ---
 
