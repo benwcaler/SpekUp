@@ -8,12 +8,12 @@
 
   
 
-### [1-Description](https://github.com/benwcaler/RepoName#Description)
-### [2-Technologies](https://github.com/benwcaler/RepoName#Technologies)
-### [3-Challenges](https://github.com/benwcaler/RepoName#Challenges)
-### [4-Issues](https://github.com/benwcaler/RepoName#Issues)
-### [5-Desired Features](https://github.com/benwcaler/RepoName#Desired-Features)
-### [6-Contributors](https://github.com/benwcaler/RepoName#Contributors)
+### [1-Description](https://github.com/benwcaler/SpekUp#Description)
+### [2-Technologies](https://github.com/benwcaler/SpekUp#Technologies)
+### [3-Challenges](https://github.com/benwcaler/SpekUp#Challenges)
+### [4-Issues](https://github.com/benwcaler/SpekUp#Issues)
+### [5-Desired Features](https://github.com/benwcaler/SpekUp#Desired-Features)
+### [6-Contributors](https://github.com/benwcaler/SpekUp#Contributors)
 
  ---
 
