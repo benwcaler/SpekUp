@@ -9,7 +9,7 @@
   
 
 ### [Description](#1-description)
-### [Technologies](#2-technologies)
+### [Technologies](#2-technologies-computer)
 ### [Challenges](#3-challenges)
 ### [Issues](#4-issues)
 ### [Desired Features](#5-desired-features)
@@ -28,7 +28,7 @@ This is a description of a project that I have completed that focuses on a speci
 ---
 
 
-### 2 Technologies
+### 2 Technologies :computer:
 
   This project utilizes the following technologies:
 
@@ -82,7 +82,7 @@ Throughout this project there was only one challenge the proved to be tricky to 
 4.	idea4
 5.	idea5
 
-## 6 Contributors
+### 6 Contributors
 
 - [Nick Brown](https://github.com/nick-d-brown/)
 
