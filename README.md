@@ -1,5 +1,5 @@
 <!-- This is a basic template for ReadMe files -->
-####Note: This project (and this readme) is a work in progress!!
+#### Note: This project (and this readme) is a work in progress!!
 
 # SpekUp
 
