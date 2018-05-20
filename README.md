@@ -1,5 +1,5 @@
 <!-- This is a basic template for ReadMe files -->
-#### Note: This project (and this readme) is a work in progress!!
+#### Note: This project (and this readme) is a work in progress and far from finished!
 
 # SpekUp
 
@@ -20,9 +20,10 @@
 
 ### 1 Description :page\_facing\_up:
 
-This is a description of a project that I have completed that focuses on a specific technology with other supporting technologies that I have already learned. This description should give you a good idea of what the project does in plan, design and implementation. How does it help improve the user's life? What is the overall purpose of the work? If I were to leave the project today what would people need to know about the idea in order to maintain the project
+The idea behind this project was to create a presentation tool that will provide live feedback to a presenter from the audience. This data can then be displayed, and analyzed to provide the presenter with actionable data to make an informed decision for the next step. 
 
-> **Note:** Below is an image of the landing page for the project.
+This project was used to display my understanding/skills in full stack web development using ExpressJS, MySQL/Sequelize, NodeJS, and other technologies I had previously learned. 
+
 
 ![Book image](https://github.com/benwcaler/githubassets/blob/master/images/spekup.png?raw=true)
 
@@ -47,8 +48,8 @@ This is a description of a project that I have completed that focuses on a speci
 - Handlebars
 - [Heroku](https://www.heroku.com/)
 - JawsDB
-- MySQL
-- Sequelize
+- MySQL (future - MongoDB)
+- Sequelize (future - Mongoose)
 - ExpressJS
 
 
@@ -56,38 +57,28 @@ This is a description of a project that I have completed that focuses on a speci
 
 ### 3 Challenges :scream::boom:
 
-> **Note:** This section is meant for beginners an idea of what the *crux* technology was for this project. Ideally by seeing this first they will be able tackle the hard problem first to start the learning/absorption process as soon as possible.
-
-Throughout this project there was only one challenge the proved to be tricky to handle, ___________________. ________ was a new technology to take on and after spending a good amount of time in the documentation I started to grasp it. My advice would be start early. Use the links listed below to learn more about the technology and remember **you will eventually learn how everything works!**
-
----**Suggested Links**---
-
--[Link1]()
--[Link1]()
--[Link1]()
--[Link1]()
+Generally speaking, this project has not been very difficult. Though, if there was one crux that has given me pause it would be the Sequelize models and incorporating them into the right API routes. It isn't so much the model themselves, or the routes themselves, but more just making sure I have made the correct associations between models, and plugged them into the correct routes. 
 
 ### 4 Issues :question::exclamation:
 
-  Currently there are no known issues that need to be resolved. If you find an issue please submit it using the issues tab, or contact [Nick Brown](https://github.com/nick-d-brown/).
-
----
+As this is a work in progress there are currently many issues with this application. This section will be updated with more detail as the progress moves closer to a finished state. 
 
 ### 5 Desired Features :star2:
 
-  Below is a list of possible features that we would like to add to the project. If You would like to propose a feature to add please feel free to create a PR to add it to the list. **We love it when others can help propose ideas!**
+  Below is a list of possible features that will likely be added to the project. If you would like to propose a feature to add please feel free to create a PR to add it to the list. **I love it when others can help propose ideas!**
 
-1.	idea1
-2.	idea2
-3.	idea3
-4.	idea4
-5.	idea5
+1.	MongoDB
+2.	Live updates to the presenter's results view
+3.	Additional question types
 
 ### 6 Contributors :raised_hands:
 
-- [Nick Brown](https://github.com/nick-d-brown/)
+- [Ben Caler](https://github.com/benwcaler/)
+- [Manjunath Prasad](https://github.com/mpras55)
+- [Kai Choi](https://github.com/cetusky)
+- [Jerson Hatch](https://github.com/gatogateau)t
 
-> **PS:** If you would like to contribute please contact Nick Brown on GitHub or at n.brown.professional@gmail.com. We welcome bot first time contributors and experienced developers with critical feedback. 
+> **PS:** If you would like to contribute please contact Ben Caler on GitHub.
 
 
 ## Thanks for visiting!
