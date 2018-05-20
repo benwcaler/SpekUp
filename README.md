@@ -13,7 +13,7 @@
 ### [3-Challenges](#3-challenges)
 ### [4-Issues](#4-issues)
 ### [5-Desired Features](#5-desired-features)
-### [6-Contributors](#6-contributors)
+### [6-Contributors](#contributors)
 
  ---
 
@@ -82,7 +82,7 @@ Throughout this project there was only one challenge the proved to be tricky to 
 4.	idea4
 5.	idea5
 
-### 6 Contributors
+### Contributors
 
 - [Nick Brown](https://github.com/nick-d-brown/)
 
