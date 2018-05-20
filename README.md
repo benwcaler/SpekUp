@@ -1,6 +1,6 @@
 <!-- This is a basic template for ReadMe files -->
 
-# Title
+# SpekUp
 
   
 
@@ -8,12 +8,12 @@
 
   
 
-### [1-Description](https://github.com/nick-d-brown/RepoName#Description)
-### [2-Technologies](https://github.com/nick-d-brown/RepoName#Technologies)
-### [3-Challenges](https://github.com/nick-d-brown/RepoName#Challenges)
-### [4-Issues](https://github.com/nick-d-brown/RepoName#Issues)
-### [5-Desired Features](https://github.com/nick-d-brown/RepoName#Desired-Features)
-### [6-Contributors](https://github.com/nick-d-brown/RepoName#Contributors)
+### [1-Description](https://github.com/benwcaler/RepoName#Description)
+### [2-Technologies](https://github.com/benwcaler/RepoName#Technologies)
+### [3-Challenges](https://github.com/benwcaler/RepoName#Challenges)
+### [4-Issues](https://github.com/benwcaler/RepoName#Issues)
+### [5-Desired Features](https://github.com/benwcaler/RepoName#Desired-Features)
+### [6-Contributors](https://github.com/benwcaler/RepoName#Contributors)
 
  ---
 
@@ -23,11 +23,7 @@ This is a description of a project that I have completed that focuses on a speci
 
 > **Note:** Below is an image of the landing page for the project.
 
-
-
-
-![Book image](https://github.com/nick-d-brown/Basic-Portfolio-html_css/blob/master/images/2-sanddunes.jpg?raw=true)
-
+![Book image](https://github.com/benwcaler/githubassets/blob/master/images/spekup.png?raw=true)
 
 ---
 
@@ -35,7 +31,6 @@ This is a description of a project that I have completed that focuses on a speci
 ### 2-Technologies  :computer:
 
   This project utilizes the following technologies:
-  > **Note: Delete this note and the following technologies that do not apply.**
 
 
 - HTML
@@ -43,30 +38,18 @@ This is a description of a project that I have completed that focuses on a speci
 - Vanilla JavaScript
 - [jQuery](https://jquery.com/)
 - [Twitter Bootstrap](https://getbootstrap.com/)
-- [Google Materialize](http://materializecss.com/)
-- [Animate.css](https://daneden.github.io/animate.css/)
-- [Greensock.js](https://greensock.com/)
-- [Moment.js](https://momentjs.com/)
-- [Google Firebase](https://firebase.google.com/)
-- [React.js](https://reactjs.org/)
 - [Node.js](https://nodejs.org/en/)
--- Security and Session Storage
--- User Authentication
--- Express
 - AJAX
 - Web APIs
 - [Google Fonts](https://fonts.google.com/)
 - Responsive Design
-- SASS
-- LESS
-- GRUNT
-- GULP
 - Handlebars
-- Cookies, Local Storage
 - [Heroku](https://www.heroku.com/)
-- Laravel
+- JawsDB
 - MySQL
-- MongoDB
+- Sequelize
+- ExpressJS
+
 
 ---
 
