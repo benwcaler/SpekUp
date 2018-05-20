@@ -22,7 +22,7 @@
 
 The idea behind this project was to create a presentation tool that will provide live feedback to a presenter from the audience. This data can then be displayed, and analyzed to provide the presenter with actionable data to make an informed decision for the next step. 
 
-This project was used to display my understanding/skills in full stack web development using ExpressJS, MySQL/Sequelize, NodeJS, and other technologies I had previously learned. 
+This project was used to display an understanding of full stack web development using ExpressJS, MySQL/Sequelize, NodeJS, and other technologies previously learned. 
 
 
 ![Book image](https://github.com/benwcaler/githubassets/blob/master/images/spekup.png?raw=true)
@@ -57,7 +57,7 @@ This project was used to display my understanding/skills in full stack web devel
 
 ### 3 Challenges :scream::boom:
 
-Generally speaking, this project has not been very difficult. Though, if there was one crux that has given me pause it would be the Sequelize models and incorporating them into the right API routes. It isn't so much the model themselves, or the routes themselves, but more just making sure I have made the correct associations between models, and plugged them into the correct routes. 
+Generally speaking, this project has not been very difficult. Though, if there was one crux that has given us pause it would be the Sequelize models and incorporating them into the right API routes. It isn't so much the model themselves, or the routes themselves, but more just making sure we have made the correct associations between models, and plugged them into the correct routes. 
 
 ### 4 Issues :question::exclamation:
 
