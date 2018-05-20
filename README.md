@@ -82,7 +82,7 @@ Throughout this project there was only one challenge the proved to be tricky to 
 4.	idea4
 5.	idea5
 
-## 6 Contributors 
+## 6-Contributors 
 
 :raised_hands:
 
