@@ -77,7 +77,7 @@ As this is a work in progress there are currently many issues with this applicat
 - [Ben Caler](https://github.com/benwcaler/)
 - [Manjunath Prasad](https://github.com/mpras55)
 - [Kai Choi](https://github.com/cetusky)
-- [Jerson Hatch](https://github.com/gatogateau)t
+- [Jerson Hatch](https://github.com/gatogateau)
 
 > **PS:** If you would like to contribute please contact Ben Caler on GitHub.
 
