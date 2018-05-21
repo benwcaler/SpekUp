@@ -51,6 +51,7 @@ This project was used to display an understanding of full stack web development 
 - MySQL (future - MongoDB)
 - Sequelize (future - Mongoose)
 - ExpressJS
+- Chart.js
 
 
 ---
